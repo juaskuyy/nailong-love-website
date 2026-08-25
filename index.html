@@ -1,1 +1,85 @@
-<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#fff6e9"><title>Ucapan Spesial</title><style>*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;background:#111;overflow:hidden;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.stage{width:100%;height:100dvh;display:grid;place-items:center;background:#111}.phone{height:100dvh;aspect-ratio:576/1024;max-width:100vw;position:relative;overflow:hidden;background:#fff6e9}.phone video{width:100%;height:100%;object-fit:cover;display:block}.hint{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);padding:9px 14px;border-radius:999px;background:#ffffffcc;color:#7c5b57;font-size:12px;backdrop-filter:blur(8px);box-shadow:0 4px 18px #0001;white-space:nowrap}.hint.hide{opacity:0;pointer-events:none;transition:.4s}</style></head><body><main class="stage"><div class="phone"><video id="v" src="reference.mp4" autoplay muted playsinline loop></video><div id="hint" class="hint">Tap untuk suara ♡</div></div></main><script>const v=document.getElementById('v'),h=document.getElementById('hint');document.querySelector('.phone').addEventListener('click',()=>{v.muted=!v.muted;if(!v.muted)v.play();h.classList.add('hide')},{once:false});</script></body></html>
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Nailong Punya Sesuatu Buatmu 💗</title>
+<meta name="theme-color" content="#fff6dc">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <div id="hearts" aria-hidden="true"></div>
+  <main>
+    <section class="hero section" id="home">
+      <div class="cloud c1"></div><div class="cloud c2"></div>
+      <h1>Nailong punya <span>sesuatu</span><br>buatmu</h1>
+      <p class="sub">Kasih bunga ke Nailong dulu yaa 🌸</p>
+      <div class="hero-art">
+        <div class="halo"></div>
+        <img src="assets/nailong-hero.jpg" alt="Nailong" class="nailong-art">
+        <button class="flower f-left" data-flower="left">🌷</button>
+        <button class="flower f-right" data-flower="right">🌷</button>
+        <div class="tiny-heart">💗</div>
+      </div>
+      <button class="pink-btn" id="startBtn">Klik disini 💗</button>
+      <div class="hint">💜 Tarik bunga ke kedua tangan Nailong<br>untuk melihat dia senyum 💜</div>
+    </section>
+
+    <section class="letter section" id="letter">
+      <div class="section-no">01</div><div class="flower-icon">🌸</div>
+      <h2>Ucapan Pembuka</h2>
+      <article class="paper">
+        <p>Aku cuma pengen kamu tahu kalau halaman kecil ini aku buat khusus buat kamu. Mungkin sederhana, tapi setiap bagian di dalamnya aku isi dengan niat dan rasa yang tulus.</p>
+        <p>Aku nggak selalu pandai mengungkapkan semuanya lewat kata-kata. Kadang rasa sayang itu malah lebih sering aku tunjukin lewat hal-hal kecil yang mungkin nggak selalu kamu sadari.</p>
+        <p>Jadi... sebelum lanjut lihat isi halaman ini, aku cuma mau bilang satu hal.</p>
+        <p>Makasi ya, karena selama ini kamu sudah hadir, bikin hari-hariku jadi lebih berwarna, dan jadi salah satu alasan aku senyum setiap hari. ❤️</p>
+      </article>
+    </section>
+
+    <section class="gallery section" id="gallery">
+      <div class="section-no">02</div><div class="flower-icon">🌸</div>
+      <h2>Foto-Foto Kamu</h2>
+      <div class="gallery-stack">
+        <figure class="polaroid tilt1"><img src="assets/photo1.jpg"><figcaption>Kamu saat Bengong</figcaption></figure>
+        <figure class="polaroid tilt2"><img src="assets/photo2.jpg"><figcaption>Muka Manis Kamu</figcaption></figure>
+        <figure class="polaroid tilt3"><img src="assets/photo3.jpg"><figcaption>Foto Jepretan Kamu</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="video-card section" id="video">
+      <div class="section-no">05</div><div class="flower-icon">🌸</div>
+      <h2>Sebuah Video Untukmu</h2>
+      <div class="tv">
+        <div class="nailong-mini">🐥</div>
+        <div class="screen"><div class="filmstrip"></div><div class="screen-text">Video kenangan<br><small>tambahkan videomu nanti</small></div></div>
+      </div>
+    </section>
+
+    <section class="quote section">
+      <div class="section-no">06</div><div class="flower-icon">🌸</div>
+      <h2>Quote Untukmu</h2>
+      <div class="quote-nailong">🐥</div>
+      <blockquote>“Semoga semua foto di halaman ini hanyalah awal dari ribuan kenangan kita berikutnya.”</blockquote>
+    </section>
+
+    <section class="ending section">
+      <div class="ending-nailong">🐥</div>
+      <div class="ending-card">
+        <p>Aku udah siapin momen spesial ini buat kamu, kalau kamu mau bagikan ke story aku udah siapin.</p>
+        <button class="pink-btn" id="shareBtn">Pamerin ke Story ✨</button>
+      </div>
+      <p class="made">Dibuat dengan 💛 oleh <b>Andra</b><br><span>ucapanpacar.com</span></p>
+    </section>
+  </main>
+
+  <div class="music" id="music">
+    <div class="cassette">🎀</div><div><b>Lagu Spesial 🎵</b><div class="bars">▮▮▮▮▮</div></div>
+    <button id="musicBtn" aria-label="putar musik">▶</button>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

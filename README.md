@@ -1,5 +1,9 @@
-# Website replica
+# Nailong Love Website
 
-Versi awal ini mempertahankan visual dan animasi video referensi secara pixel-consistent dengan memutar video referensi sebagai layer utama.
+Static HTML/CSS/JS recreation based on the user-provided reference video. The reference video itself is NOT embedded or uploaded to the website.
 
-Tahap berikutnya dapat mengganti foto pasangan dan membuat bagian-bagian interaktif menjadi HTML/CSS/JS asli.
+## Run
+Open `index.html` locally or deploy the folder to GitHub Pages / Cloudflare Pages.
+
+## Next step
+Replace `assets/photo1.jpg`, `photo2.jpg`, and `photo3.jpg` with the couple photos. Replace the placeholder video section with the user's own video if desired.

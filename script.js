@@ -1,0 +1,10 @@
+const $=s=>document.querySelector(s);
+const hearts=document.querySelector('#hearts');
+function spawnHeart(){const s=document.createElement('span');s.textContent=['💗','💕','💖','💛','🌸'][Math.floor(Math.random()*5)];s.style.left=Math.random()*100+'vw';s.style.animationDuration=(5+Math.random()*5)+'s';s.style.fontSize=(14+Math.random()*16)+'px';hearts.appendChild(s);setTimeout(()=>s.remove(),10000)}
+setInterval(spawnHeart,850); for(let i=0;i<8;i++)setTimeout(spawnHeart,i*300);
+$('#startBtn').onclick=()=>document.querySelector('#letter').scrollIntoView({behavior:'smooth'});
+let flowers=[...document.querySelectorAll('.flower')];
+flowers.forEach(f=>{let dragging=false;let ox=0,oy=0;const down=e=>{dragging=true;f.classList.add('grab');const p=e.touches?e.touches[0]:e;ox=p.clientX-f.getBoundingClientRect().left;oy=p.clientY-f.getBoundingClientRect().top;f.setPointerCapture?.(e.pointerId)};const move=e=>{if(!dragging)return;const p=e.touches?e.touches[0]:e;f.style.left=(p.clientX-ox)+'px';f.style.top=(p.clientY-oy+scrollY)+'px';f.style.right='auto';f.style.bottom='auto'};const up=()=>{if(!dragging)return;dragging=false;f.classList.remove('grab');const r=f.getBoundingClientRect();if(r.top>350&&r.top<720){document.querySelector('.nailong-art').style.filter='saturate(1.2) brightness(1.05)';document.querySelector('.tiny-heart').textContent='🥰';}};f.addEventListener('pointerdown',down);window.addEventListener('pointermove',move);window.addEventListener('pointerup',up)});
+let playing=false;$('#musicBtn').onclick=()=>{playing=!playing;$('#musicBtn').textContent=playing?'❚❚':'▶';document.querySelector('.music').style.transform='translateX(-50%) scale('+(playing?'1.02':'1')+')'};
+$('#shareBtn').onclick=async()=>{if(navigator.share){await navigator.share({title:'Momen Spesial 💗',text:'Aku punya sesuatu buatmu 💗',url:location.href})}else alert('Link website siap dibagikan: '+location.href)};
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.12});document.querySelectorAll('.section').forEach(s=>io.observe(s));
