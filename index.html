@@ -1,85 +1,65 @@
 <!doctype html>
 <html lang="id">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Nailong Punya Sesuatu Buatmu 💗</title>
-<meta name="theme-color" content="#fff6dc">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Buatmu 💗</title>
+<style>
+:root{--bg:#fff8df;--brown:#5d3428;--pink:#f68ab8;--pink2:#ffb3cf;--white:#fff;}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--brown);font-family:ui-rounded,"Trebuchet MS",system-ui,sans-serif;overflow-x:hidden}
+.page{min-height:100vh;padding:38px 18px 115px;position:relative;max-width:620px;margin:auto}
+.float{position:fixed;z-index:0;pointer-events:none;opacity:.8;animation:float 6s ease-in-out infinite}.f1{left:6%;top:13%}.f2{right:7%;top:27%;animation-delay:1s}.f3{left:9%;bottom:24%;animation-delay:2s}.f4{right:5%;bottom:12%;animation-delay:3s}
+@keyframes float{50%{transform:translateY(-16px) rotate(8deg)}}
+h1{text-align:center;font-size:48px;line-height:1;margin:0 0 10px;font-weight:900;letter-spacing:-2px;position:relative;z-index:1}h1 span{color:#8b3f2e}.subtitle{text-align:center;font-size:22px;margin:0 0 28px;position:relative;z-index:1}
+.hero{position:relative;z-index:1;background:linear-gradient(145deg,#ffe6d8,#fff0df);border-radius:48px;padding:22px 18px 18px;box-shadow:0 20px 50px #e9c6a955;overflow:hidden}
+.photo-wrap{position:relative;border-radius:34px;overflow:hidden;background:#f8dfcc;aspect-ratio:1/1;box-shadow:0 14px 35px #b9795133}
+.photo{width:100%;height:100%;object-fit:cover;display:block;transition:opacity .35s,transform .5s}.photo.after{position:absolute;inset:0;opacity:0}.done .photo.before{opacity:0}.done .photo.after{opacity:1}.done .photo-wrap{box-shadow:0 18px 50px #f49aaf55}
+.dropzone{position:absolute;inset:8% 8%;border:3px dashed transparent;border-radius:28px;transition:.25s;pointer-events:none}.dragging .dropzone{border-color:#ff8fba;background:#ffffff22}
+.status{text-align:center;font-weight:800;font-size:20px;margin:18px 0 0}.status small{display:block;font-weight:500;font-size:15px;margin-top:5px;opacity:.8}
+.flowers{position:relative;z-index:2;margin:24px auto 0;background:#fffaf0;border:2px dashed #ffc2d7;border-radius:32px;padding:18px 12px 22px;text-align:center}.flowers h2{font-size:19px;margin:0 0 14px;color:#ef78a9}.flower-row{display:flex;justify-content:center;gap:18px;align-items:flex-end}.flower{width:78px;height:96px;display:grid;place-items:center;font-size:60px;cursor:grab;touch-action:none;user-select:none;filter:drop-shadow(0 7px 6px #d78a9c44);transition:transform .2s}.flower:active{cursor:grabbing;transform:scale(1.12)}
+.drag-ghost{position:fixed;z-index:9999;pointer-events:none;font-size:58px;transform:translate(-50%,-50%) rotate(-8deg);filter:drop-shadow(0 8px 8px #0002)}
+.instruction{margin:16px auto 0;background:#fff;border-radius:28px;padding:16px 18px;text-align:center;font-size:16px;font-weight:700;box-shadow:0 8px 22px #d9b18a22}.instruction b{color:#df6b9d}
+.btn{display:block;margin:22px auto 0;border:0;background:linear-gradient(135deg,#f98bb8,#f27aaa);color:#fff;font-weight:900;font-size:20px;padding:17px 40px;border-radius:999px;box-shadow:0 10px 24px #ef7fa744;cursor:pointer}.btn:active{transform:scale(.97)}
+.success{display:none;text-align:center;margin:20px 0 0;font-weight:900;color:#dc6597;font-size:21px}.done .success{display:block}.done .flowers{opacity:.65;pointer-events:none}.done .instruction{display:none}
+.music{position:fixed;left:50%;bottom:14px;transform:translateX(-50%);width:min(560px,calc(100% - 28px));background:#fff;border-radius:34px;padding:12px 14px;display:flex;align-items:center;gap:13px;box-shadow:0 12px 35px #bc896044;z-index:20}.music-icon{width:62px;height:62px;border-radius:20px;background:#ffd1df;display:grid;place-items:center;font-size:31px}.music-info{flex:1}.music-title{font-size:19px;font-weight:900}.bars{display:flex;gap:5px;margin-top:5px}.bars i{width:5px;height:12px;background:#ef8bb0;border-radius:5px;animation:bar .8s infinite alternate}.bars i:nth-child(2){animation-delay:.12s}.bars i:nth-child(3){animation-delay:.24s}.bars i:nth-child(4){animation-delay:.36s}.bars i:nth-child(5){animation-delay:.48s}@keyframes bar{to{height:20px}}.pause{width:58px;height:58px;border:0;border-radius:50%;background:#f47fb0;color:#fff;font-size:24px;font-weight:900}.paused .bars i{animation-play-state:paused}
+@media(max-width:420px){h1{font-size:43px}.subtitle{font-size:19px}.page{padding-top:28px}.flower{width:68px;font-size:52px}.hero{border-radius:38px}}
+</style>
 </head>
 <body>
-<div class="app">
-  <div id="hearts" aria-hidden="true"></div>
-  <main>
-    <section class="hero section" id="home">
-      <div class="cloud c1"></div><div class="cloud c2"></div>
-      <h1>Nailong punya <span>sesuatu</span><br>buatmu</h1>
-      <p class="sub">Kasih bunga ke Nailong dulu yaa 🌸</p>
-      <div class="hero-art">
-        <div class="halo"></div>
-        <img src="assets/nailong-hero.jpg" alt="Nailong" class="nailong-art">
-        <button class="flower f-left" data-flower="left">🌷</button>
-        <button class="flower f-right" data-flower="right">🌷</button>
-        <div class="tiny-heart">💗</div>
-      </div>
-      <button class="pink-btn" id="startBtn">Klik disini 💗</button>
-      <div class="hint">💜 Tarik bunga ke kedua tangan Nailong<br>untuk melihat dia senyum 💜</div>
-    </section>
-
-    <section class="letter section" id="letter">
-      <div class="section-no">01</div><div class="flower-icon">🌸</div>
-      <h2>Ucapan Pembuka</h2>
-      <article class="paper">
-        <p>Aku cuma pengen kamu tahu kalau halaman kecil ini aku buat khusus buat kamu. Mungkin sederhana, tapi setiap bagian di dalamnya aku isi dengan niat dan rasa yang tulus.</p>
-        <p>Aku nggak selalu pandai mengungkapkan semuanya lewat kata-kata. Kadang rasa sayang itu malah lebih sering aku tunjukin lewat hal-hal kecil yang mungkin nggak selalu kamu sadari.</p>
-        <p>Jadi... sebelum lanjut lihat isi halaman ini, aku cuma mau bilang satu hal.</p>
-        <p>Makasi ya, karena selama ini kamu sudah hadir, bikin hari-hariku jadi lebih berwarna, dan jadi salah satu alasan aku senyum setiap hari. ❤️</p>
-      </article>
-    </section>
-
-    <section class="gallery section" id="gallery">
-      <div class="section-no">02</div><div class="flower-icon">🌸</div>
-      <h2>Foto-Foto Kamu</h2>
-      <div class="gallery-stack">
-        <figure class="polaroid tilt1"><img src="assets/photo1.jpg"><figcaption>Kamu saat Bengong</figcaption></figure>
-        <figure class="polaroid tilt2"><img src="assets/photo2.jpg"><figcaption>Muka Manis Kamu</figcaption></figure>
-        <figure class="polaroid tilt3"><img src="assets/photo3.jpg"><figcaption>Foto Jepretan Kamu</figcaption></figure>
-      </div>
-    </section>
-
-    <section class="video-card section" id="video">
-      <div class="section-no">05</div><div class="flower-icon">🌸</div>
-      <h2>Sebuah Video Untukmu</h2>
-      <div class="tv">
-        <div class="nailong-mini">🐥</div>
-        <div class="screen"><div class="filmstrip"></div><div class="screen-text">Video kenangan<br><small>tambahkan videomu nanti</small></div></div>
-      </div>
-    </section>
-
-    <section class="quote section">
-      <div class="section-no">06</div><div class="flower-icon">🌸</div>
-      <h2>Quote Untukmu</h2>
-      <div class="quote-nailong">🐥</div>
-      <blockquote>“Semoga semua foto di halaman ini hanyalah awal dari ribuan kenangan kita berikutnya.”</blockquote>
-    </section>
-
-    <section class="ending section">
-      <div class="ending-nailong">🐥</div>
-      <div class="ending-card">
-        <p>Aku udah siapin momen spesial ini buat kamu, kalau kamu mau bagikan ke story aku udah siapin.</p>
-        <button class="pink-btn" id="shareBtn">Pamerin ke Story ✨</button>
-      </div>
-      <p class="made">Dibuat dengan 💛 oleh <b>Andra</b><br><span>ucapanpacar.com</span></p>
-    </section>
-  </main>
-
-  <div class="music" id="music">
-    <div class="cassette">🎀</div><div><b>Lagu Spesial 🎵</b><div class="bars">▮▮▮▮▮</div></div>
-    <button id="musicBtn" aria-label="putar musik">▶</button>
+<div class="float f1">🌸</div><div class="float f2">💗</div><div class="float f3">🌷</div><div class="float f4">💞</div>
+<main class="page" id="app">
+<h1><span>Buatmu</span> 💗</h1>
+<p class="subtitle">Kasih bunga ke Nailong dulu yaa 🌸</p>
+<section class="hero" id="hero">
+  <div class="photo-wrap" id="dropTarget" aria-label="Area Nailong untuk memberi bunga">
+    <img class="photo before" src="assets/nailong-before.jpg" alt="Nailong sebelum diberi bunga">
+    <img class="photo after" src="assets/nailong-after.jpg" alt="Nailong setelah diberi bunga">
+    <div class="dropzone"></div>
   </div>
-</div>
-<script src="script.js"></script>
-</body>
-</html>
+  <div class="status" id="status">💗 Kasih bunga ke Nailong dulu yaa<small>Geser salah satu bunga ke gambar Nailong</small></div>
+  <div class="success">Nailong senang banget dapat bunga! 🥹💗🌷</div>
+</section>
+<section class="flowers">
+  <h2>💗 Geser bunga ke Nailong 💗</h2>
+  <div class="flower-row">
+    <div class="flower" data-flower="🌷" aria-label="Bunga tulip">🌷</div>
+    <div class="flower" data-flower="🌹" aria-label="Bunga mawar">🌹</div>
+    <div class="flower" data-flower="💐" aria-label="Buket bunga">💐</div>
+  </div>
+</section>
+<div class="instruction">💜 <b>Tarik bunga</b> ke gambar Nailong untuk melihat ekspresi dia berubah 💜</div>
+<button class="btn" id="reset">Ulangi 🌷</button>
+</main>
+<div class="music" id="music"><div class="music-icon">🎀</div><div class="music-info"><div class="music-title">Lagu Spesial 🎵</div><div class="bars"><i></i><i></i><i></i><i></i><i></i></div></div><button class="pause" id="pause">Ⅱ</button></div>
+<script>
+const app=document.getElementById('app'), target=document.getElementById('dropTarget'), status=document.getElementById('status');
+let dragging=false, ghost=null, activeFlower=null;
+function point(e){return e.touches?e.touches[0]:e}
+function start(e){e.preventDefault();activeFlower=e.currentTarget;dragging=true;document.body.classList.add('dragging');ghost=document.createElement('div');ghost.className='drag-ghost';ghost.textContent=activeFlower.dataset.flower;document.body.appendChild(ghost);move(e);}
+function move(e){if(!dragging)return;const p=point(e);ghost.style.left=p.clientX+'px';ghost.style.top=p.clientY+'px';}
+function end(e){if(!dragging)return;const p=point(e.changedTouches?e.changedTouches[0]:e);const r=target.getBoundingClientRect();const hit=p.clientX>=r.left&&p.clientX<=r.right&&p.clientY>=r.top&&p.clientY<=r.bottom;if(hit){app.classList.add('done');status.textContent='🌷 Nailong senang banget! 💗';}ghost?.remove();ghost=null;dragging=false;document.body.classList.remove('dragging');activeFlower=null;}
+document.querySelectorAll('.flower').forEach(f=>{f.addEventListener('pointerdown',start);});window.addEventListener('pointermove',move,{passive:false});window.addEventListener('pointerup',end);window.addEventListener('touchmove',move,{passive:false});window.addEventListener('touchend',end);
+document.getElementById('reset').onclick=()=>{app.classList.remove('done');status.innerHTML='💗 Kasih bunga ke Nailong dulu yaa<small>Geser salah satu bunga ke gambar Nailong</small>';window.scrollTo({top:0,behavior:'smooth'})};
+const music=document.getElementById('music');document.getElementById('pause').onclick=()=>{music.classList.toggle('paused');document.getElementById('pause').textContent=music.classList.contains('paused')?'▶':'Ⅱ'};
+</script>
+</body></html>
