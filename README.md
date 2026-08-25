@@ -1,5 +1,5 @@
 # Nailong Love Website
 
-Website interaktif mobile. Bunga digeser ke gambar Nailong. Sebelum diberi bunga memakai `nailong-before.jpg`; setelah drop berhasil otomatis berganti ke `nailong-after.jpg`.
+Versi ini mengikuti alur bagian Nailong dari video referensi: satu bunga harus diberikan dua kali ke dua tangan Nailong. Setelah dua drop berhasil, gambar Nailong berubah ke state senyum dan teks keberhasilan muncul.
 
-Tidak memakai video referensi sebagai background atau elemen website.
+Tidak ada video referensi yang ditanamkan ke website.
